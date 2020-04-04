@@ -1,0 +1,73 @@
+.navbar {
+    background-color : transparent;
+}
+.homepage{
+    padding-top: 5%;
+    text-align: center;
+    h2{
+        color: white;
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        font-weight: 200;
+        margin: 0;
+        padding: 0;
+    }
+    h1{
+        color: white;
+    } 
+}
+.container{
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right:auto;
+    margin-left: auto;
+        // height: 500px;
+}
+.App{
+    
+}
+.Home{
+    background: url(./components/image/background.jpg);
+    // background-repeat: no-repeat;
+    // position: fixed;
+    width: 100%;
+    display: block;
+    background-size: 100%;
+    height: 637px;
+}
+.DashBoard{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    // background: whitesmoke;
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right:0;
+    margin-left: 0;
+    width: 100%;
+        // height: 500px;
+}
+.body{
+    width: 100%;
+}
+
+.fontSlspd{
+    font-size: 0.60rem;
+}
+.fontsM-lspd{
+    font-size: 12px;
+}
+
+.mr-4{
+    float: right;
+}
+
+.img-footer{
+    float:left
+}
+
+.dropdown{
+    font-color:white;
+}
