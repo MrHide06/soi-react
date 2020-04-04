@@ -8,6 +8,7 @@ Ini adalah _project react_ yang berbasis web dengan sumber dari salah satu web _
 * Container
 * ROW
 * COLUMN
+* MEDIA
 * Framework : __BOOTSTRAP__
 >NOTE<br>
 Demo App : [SOI-React](https://soi-react.netlify.com/)
