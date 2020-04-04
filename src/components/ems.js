@@ -20,7 +20,7 @@ class Ems extends React.Component {
                             alt="Generic placeholder"
                             />
                             <p className="fontSlspd">EMS SOI</p>
-                            <h3>EMS SELALU DI HATI</h3>
+                            <h3 className="h3">EMS SELALU DI HATI</h3>
                             <p className="fontsM-lspd">
                             Dengan slogan "EMS selalu di hati", EMS SOI adalah fraksi penentu 
                             keberlangsungan hidup warga SOI, baik dalam hal kesehatan jiwa maupun batin.
