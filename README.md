@@ -9,6 +9,11 @@ Ini adalah _project react_ yang berbasis web dengan sumber dari salah satu web _
 * ROW
 * COLUMN
 * MEDIA
-* Framework : __BOOTSTRAP__
+* Corousel
+
+dan menggunakan Library:
+* FontAwesome
+* Framework : __BOOTSTRAP__ & _ Material UI_
+* React Simple Image Slider
 >NOTE<br>
 Demo App : [SOI-React](https://soi-react.netlify.com/)

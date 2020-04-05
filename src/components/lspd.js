@@ -11,6 +11,7 @@ class Lspd extends React.Component {
             <div>
                 <Container  className="DashBoard">
                     <Media>
+                        <Media.Body>
                         <img
                             width={500}
                             height={300}
@@ -18,7 +19,7 @@ class Lspd extends React.Component {
                             src={Photo}
                             alt="Generic placeholder"
                         />
-                        <Media.Body>
+                        
                             <p className="fontSlspd">LSPD SOI</p>
                             <h3>PENEGAK HUKUM SOI</h3>
                             <p className="fontsM-lspd">

@@ -6,6 +6,7 @@ import Body from './components/body'
 import Lspd from './components/lspd'
 import Ems from './components/ems'
 import Footer from './components/footer'
+import Slide from './components/slide'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       </div>
       <Lspd></Lspd>
       <Ems></Ems>
+      <Slide></Slide>
       <Footer></Footer>
     </div>
   );
