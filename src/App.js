@@ -5,7 +5,7 @@ import Header from './components/navbar'
 import Body from './components/body'
 import Lspd from './components/lspd'
 import Ems from './components/ems'
-import Footer from './components/footer'
+import Fotter from './components/footer'
 import Slide from './components/slide'
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <Lspd></Lspd>
       <Ems></Ems>
       <Slide></Slide>
-      <Footer></Footer>
+      <Fotter></Fotter>
     </div>
   );
 }
