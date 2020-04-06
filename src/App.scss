@@ -27,7 +27,7 @@
 }
 
 .Home{
-    background: url(./components/image/preview.png);
+    background: url(./components/image/preview.jpg);
     background-repeat: no-repeat;
     // position: fixed;
     width: 100%;
@@ -84,7 +84,7 @@
 
 @media screen and(max-width:680px){
     .Home{
-        background: url(./components/image/preview.png);
+        background: url(./components/image/preview.jpg);
         background-position: center;
         background-size: auto;
     }
