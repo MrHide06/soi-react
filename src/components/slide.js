@@ -1,54 +1,80 @@
 import React from 'react';
 
-import "bootstrap/dist/css/bootstrap.min.css"
-import Carousel from 'react-bootstrap/Carousel'
-import CarouselItem from 'react-bootstrap/CarouselItem'
-// import CarouselCaption from 'react-bootstrap/CarouselCaption'
+import CssBaseLine from '@material-ui/core/CssBaseline'
+import SimpleImageSlider from 'react-simple-image-slider'
 import photo1 from './image/thegodfather.jpg'
 import photo2 from './image/generation.jpg'
-import photo3 from './image/oldcartel.jpg'
 
 class Slide extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            useGPURender: true,
+            showNavs:true,
+            showBullets:true,
+            navStyle:1,
+            slideDuration:0.5,
+            bgColor: '#000000',
+            slideIndexText: '',
+        };
+    }
+
+    componentDidMount(){
+        console.log("[Slide componentDidMount]");
+    }
+    componentDidUpdate(prevProps, prevState, snapshot){
+        console.log("[Slide componentDidUpdate]");
+    }
+    onClickNav = (toRight) =>{
+        console.log(`[Slide onClickNav] ${toRight}`);
+    }
+    onClickBullets = (idx) => {
+        console.log(`[Slide onClickBullets] ${idx}`);
+    }
+    onStartSlide = (idx, length) => {
+        console.log(`[Slide onStartSlide] ${idx}/${length}`);
+        this.setState({ slideIndexText: `${idx}/${length}`});
+    }
+    onCompleteSlide = (idx, length) =>{
+        console.log(`[Slide onCompleteSlide] ${idx}/${length}`);
+        this.setState({ slideIndexText: `${idx}/${length}`});
+    }
+    onToggleOptions = value => () =>{
+        console.log(`[App onToggleOptions] ${value}`);
+        const updateValue = !this.state[value];
+        this.setState({ [value]: updateValue});
+    }
+    onChangeSelect = event => this.setState({ [event.target.name]: event.target.value});
+    
     render() {
+        const images = [
+            { photo1 },
+            { photo2 },
+            { url: "images/lspd.png" },
+            { url: "images/4.jpg" },
+            { url: "images/5.jpg" },
+            { url: "images/6.jpg" },
+            { url: "images/7.jpg" },
+        ];
+        
         return (
             <div style={{ textAlign: "center" }}>
-            <h1>Gallery</h1>
-                <Carousel>
-                <CarouselItem>
-                    <img
-                    src={photo1}
-                    alt="First slide"
-                    height="334px"
+                <CssBaseLine />
+                <SimpleImageSlider
+                        style={{ margin: "0 auto", marginTop: "50px" }}
+                        width={500}
+                        height={300}
+                        images={images}
+                        showBullets={this.state.showBullets}
+                        showNavs={this.state.showNavs}
+                        useGPURender={this.state.useGPURender}
+                        navStyle={this.state.navStyle}
+                        slideDuration={this.state.slideDuration}
+                        onClickNav={this.onClickNav}
+                        onClickBullets={this.onClickBullets}
+                        onStartSlide={this.onStartSlide}
+                        onCompleteSlide={this.onCompleteSlide}
                     />
-                    {/* <CarouselCaption>
-                        <h3 className="carousel">The God Father</h3>
-                        <p className="carousel">The God Father Cartel a.k.a Mr.O</p>
-                    </CarouselCaption> */}
-                </CarouselItem>
-                <CarouselItem>
-                    <img
-                    src={photo2}
-                    alt="Third slide"
-                    height="334px"
-                    />
-                    {/* <CarouselCaption>
-                        <h3 className="carousel">ReGeneration Cartel and Mafia</h3>
-                        <p className="carousel">"Setiap masa ada orangnya dan setiap orang ada masanya... biarkan mereka datang sebagai Raja dan pergi sebagai Legenda"~</p>
-                    </CarouselCaption> */}
-                </CarouselItem>
-                <CarouselItem>
-                    <img
-                    max-width= '100%'
-                    src={photo3}
-                    alt="Third slide"
-                    height="334px"
-                    />
-                    {/* <CarouselCaption>
-                        <h3 className="carousel">Old Cartel</h3>
-                        <p className="carousel">"Legends never Die"~</p>
-                    </CarouselCaption> */}
-                </CarouselItem>
-                </Carousel>
             </div>
         );
     }
