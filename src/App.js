@@ -11,8 +11,8 @@ import Slide from './components/slide'
 function App() {
   return (
     <div className="App">
-      <div className="Home">
-      <Header></Header>  
+      <Header></Header>
+      <div className="Home">  
       <Body></Body>
       </div>
       <Lspd></Lspd>
